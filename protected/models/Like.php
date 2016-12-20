@@ -27,12 +27,12 @@ class Like extends CActiveRecord
 
 	public function relations() {
 		return array(
-			'blogpost'=>array(self::BELONGS_TO, 'Blogpost', 'blogpost_id')
-			'user'=>array(self::BELONGS_TO, 'User', 'user_id')
+			'blogpost'=>array(self::BELONGS_TO, 'Blogpost', 'blogpost_id'),
+			'user'=>array(self::BELONGS_TO, 'User', 'user_id'),
 		);
 	}
 
-	public function beforeSave() {
+	/*public function beforeSave() {
 		if($this->isNewRecord) { 
 			$this->created_at = time();
 		}
@@ -46,6 +46,7 @@ class Like extends CActiveRecord
 			$this->$column_name = $column_value;
 		$this->update(array_keys($column_value_array));
 	}
+	*/
 
 	public static function create($attributes) {
 		$model = new Like;

@@ -28,9 +28,9 @@ class User extends CActiveRecord {
 
 	public function relations() {
 		return array(
-			'blogposts'=>array(self::HAS_MANY, 'Blogpost', 'user_id')
-			'comments'=>array(self::HAS_MANY, 'Comment', 'user_id')
-			'likes'=>array(self::HAS_MANY, 'Like', 'user_id')
+			'blogposts'=>array(self::HAS_MANY, 'Blogpost', 'user_id'),
+			'comments'=>array(self::HAS_MANY, 'Comment', 'user_id'),
+			'likes'=>array(self::HAS_MANY, 'Like', 'user_id'),
 		);
 	}
 

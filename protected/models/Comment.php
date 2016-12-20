@@ -31,6 +31,8 @@ class Comment extends CActiveRecord
 
 	public function relations() {
 		return array(
+			'blogpost'=>array(self::BELONGS_TO, 'Blogpost', 'blogpost_id'),
+			'user'=>array(self::BELONGS_TO, 'User', 'user_id'),
 		);
 	}
 

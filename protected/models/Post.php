@@ -32,6 +32,9 @@ class Post extends CActiveRecord
 
 	public function relations() {
 		return array(
+			'user'=>array(self::BELONGS_TO, 'User', 'user_id'),
+			'comments'=>array(self::HAS_MANY, 'Comment', 'blogpost_id'),
+			'likes'=>array(self::HAS_MANY, 'Like', 'blogpost_id'),
 		);
 	}
 
